@@ -58,6 +58,7 @@ flex-direction: column;
 }
 #concept .right-section {
   width: 100%;
+  padding: 0px;
 }
 #concept .row {
 flex-direction: column-reverse;
@@ -94,15 +95,13 @@ flex-direction: column;
 #avantages .container-avantages .avantages-desc{
 text-align: center;
 }
-.h-40 {
-height: 100% !important;
-}
 .details-produit {
 display: flex;
 flex-direction: column;
 }
 #avantages .flex-grow-1 {
   flex : none;
+  padding: 0;
 }
 #avantages .container-avantages {
   box-shadow: none;

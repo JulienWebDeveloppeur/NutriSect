@@ -432,6 +432,7 @@ function incrementeArticle3() {
     eltPriceBeforeReduc.textContent = priceBeforeReduc.toFixed(2) + "€";
     eltTotalPrice.textContent = totalPrice.toFixed(2) + "€";
 }
+let produit = document.getElementsByClassName("produit");
 // J'ajoute un ecouteur d'evenement au click sur l'article 1,2 et 3 et lui ajoute une fonctions qui incremente de 1 a chaque click le nombre d'article 1 et le fait apparaitre dans la section.
 ajouterArticle1.addEventListener("click", function() {
     ajouterPanierArticle(1)
@@ -555,3 +556,17 @@ eltDeletePromoCode.addEventListener("click", function() {
         eltTotalPrice.textContent = totalPrice.toFixed(2) + "€";
     }
 }, false);
+
+// :: 1.0 Smooth scroll
+$('a[href^="#"]').on('click', function(event) {
+
+    var target = $($(this).attr('href'));
+
+    if (target.length) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top
+        }, 500);
+    }
+
+});
